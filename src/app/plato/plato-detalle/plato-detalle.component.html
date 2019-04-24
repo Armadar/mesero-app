@@ -1,0 +1,24 @@
+<div *ngIf="plato">
+    <div class="row">
+        <div class="col-xs-12">
+            <img [src]="plato.urlImagen" alt="{{plato.nombre}}" class="img-responsive" style="max-height: 250px;">
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>{{plato.nombre}}</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>{{plato.precio | currency: 'S/ '}}</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <button class="btn btn-success" (click)="editarPlato()">Editar</button>
+                <app-confirm-modal [titulo]="'plato a Eliminar'" [btnClass]="'btn btn-danger'" [labelBoton]="'Eliminar'"
+                    (estaConfirmado)="eliminarPlato($event,plato)"></app-confirm-modal>
+            </div>
+        </div>
+    </div>
+</div>

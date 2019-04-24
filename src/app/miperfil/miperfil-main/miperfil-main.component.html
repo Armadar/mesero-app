@@ -1,0 +1,23 @@
+<div *ngIf="tienda">
+  <div class="row">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>{{tienda.name}}</h1>
+      </div>
+    </div>
+    <div class="col-xs-12">
+      <img [src]="tienda.image" alt="{{tienda.name}}" class="img-responsive" style="max-height: 250px;">
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>{{tienda.address}}</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <button class="btn btn-success btn-space" (click)="editarPerfil()">Editar</button>
+        <button class="btn btn-danger" (click)="cancelar()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
